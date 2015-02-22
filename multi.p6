@@ -1,4 +1,3 @@
-
 my class Foo {
     method Str() { 'Foo as a string' }
 }

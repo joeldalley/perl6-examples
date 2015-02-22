@@ -1,7 +1,5 @@
-
 my $fruits = set <apple apple banana orange tomato apple>;
 my $tomato = set <tomato>;
-
 
 say $fruits.WHAT, " Fruits: $fruits";
 say "Fruits count: ", $fruits.elems;
