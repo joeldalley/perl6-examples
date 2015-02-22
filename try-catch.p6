@@ -35,8 +35,15 @@ Try_CATCH: {
         }
     }
 
+    try { 
+        # Type check failure.
+        my $str = 'Can $Nat.x be a string?';
+        Nat.new(x => $str);
+        CATCH { default { say .message } }
+    }
+
     # Valid construction; but then attempting to 
-    # access private $Foo.x is a fatal runtime error.
+    # access private $Nat.x is a fatal runtime error.
     try { 
         say Nat.new(x => 4).x;
         CATCH { when X::Method::NotFound { say .message } }
