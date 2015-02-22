@@ -11,9 +11,7 @@ Classify_By_Length: {
     # Classify words into an Array of Pairs, 
     # where each key is string length, and each value
     # is an array of words of that same length.
-    my Pair @classified = (@words.classify: { 
-        .Str.chars 
-    }).sort({ $^a.key.Int <=> $^b.key.Int });
+    my Pair @classified = (@words.classify: *.Str.chars).sort; 
 
     # Print in sorted order, shortest 
     # string length, to longest string length:
@@ -25,9 +23,8 @@ Classify_By_Ordinal_Sum: {
     # where each key is the ordinal sum value of 
     # the input word's letters, and each value is
     # an array of words having that ordinal sum value.
-    my Pair @classified = (@words.classify: { 
-        (.split('').map: { .ord }).reduce(* + *)
-    }).sort({ $^b.key.Int <=> $^a.key.Int });
+    my Block $sum = { (.split('').map: *.ord).reduce(* + *) };
+    my Pair @classified = (@words.classify($sum)).sort.reverse;
 
     # Print in sorted order, greatest
     # ordinal sum to least ordinal sum:
@@ -40,15 +37,14 @@ exit;
 
 # Print @classified:
 #
-# @param Array @classified Array of Pairs of (Str) => (Array)..
+# @param [Pair] @classified Array of Pairs of (Int) => (Array).
 # @return void
 sub print_classified(Str $by, Pair @classified) {
     say "<== CLASSIFIED $by ==>";
-    for @classified { 
-        say "\t",
-            .WHAT, " of ",                  # (Pair) of
-            .key.WHAT, " => ", .value.WHAT, # (Str) => (Array)
+    for @classified {
+        say "\t", .WHAT, " of ", 
+            .key.WHAT, " => ", .value.WHAT,
             " ---> ", .key, " => ", .value;
     }
-    print "\n";
+    say Nil.Str;
 }
