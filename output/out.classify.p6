@@ -1,5 +1,5 @@
 <== INPUT ARRAY ==>
-(Array) Array.new("What", "Will", "This", "Input", "Produce", "When", "Classified?")
+(Array[Str]) Array[Str].new("What", "Will", "This", "Input", "Produce", "When", "Classified?")
 
 <== CLASSIFIED By String Length ==>
 	(Pair) of (Str) => (Array) ---> 4 => What Will This When
