@@ -3,7 +3,7 @@
 # @author Joel Dalley
 # @version 2015/Feb/22
 
-my $ingredients = bag <rice beans tomatoes avocado onions rice peppers tortillas>;
+my Bag $ingredients = bag <rice beans tomatoes avocado onions rice peppers tortillas>;
 
 say "Ingredients type   --> ", $ingredients.WHAT;      # Data type.
 say "Ingredients data   --> ", $ingredients;           # All ingredients.
@@ -30,14 +30,17 @@ say "Expect one rice here     --> ", $ingredients.roll: 4;      # Four at random
 say "Roll ten                 --> ", $ingredients.roll: 10;     # Ten at random.
 say "Roll infinite, slice ten --> ", $ingredients.roll(*)[^10]; # Ten, shuffled.
 
-my @unique = $ingredients.keys;
-my @sample_sizes = (10, 100, 1_000, 10_000, 25_000, 50_000, 100_000);
+say Nil.Str; 
+
+# Demonstrate convergence on expected random percentages, for reach ingredient.
+my Str @unique = $ingredients.keys;
+my Int @sample_sizes = (10, 100, 1_000, 10_000, 25_000, 50_000, 100_000);
 
 for @sample_sizes -> $size {
-    say "Randomized dice rolls -- $size...";
+    say "$size random dice rolls, please wait...";
 
     # Create a hash of (ingredient => roll count).
-    my %rolls = @unique Z map {0}, @unique;
+    my Int %rolls = @unique Z map {0}, @unique;
     $ingredients.roll($size).map: { %rolls{$_}++ };
 
     # Rice should converge on 25% over larger sample 

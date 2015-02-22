@@ -4,69 +4,70 @@ Sorted, unique keys -> avocado beans onions peppers rice tomatoes tortillas
 Count bag contents --> 7
 Integer weight sum --> 8
 
-Pick one      --> peppers
-Pick three    --> tomatoes avocado rice
-Pick ten      --> beans tortillas avocado rice rice tomatoes onions peppers
-Pick infinite --> avocado tomatoes beans onions rice peppers tortillas rice
+Pick one      --> rice
+Pick three    --> beans tomatoes rice
+Pick ten      --> peppers avocado rice tortillas beans tomatoes onions rice
+Pick infinite --> rice onions beans rice peppers tortillas tomatoes avocado
 
-Roll one                 --> avocado
-Roll three               --> tortillas avocado avocado
-Expect one rice here     --> tomatoes beans tomatoes tomatoes
-Roll ten                 --> peppers tomatoes avocado avocado rice rice onions onions peppers onions
-Roll infinite, slice ten --> rice rice rice peppers beans avocado rice rice onions peppers
-Randomized dice rolls -- 10...
-	avocado 0.00%
-	beans 10.00%
-	onions 10.00%
-	peppers 0.00%
-	rice 50.00%
-	tomatoes 20.00%
-	tortillas 10.00%
-Randomized dice rolls -- 100...
-	avocado 15.00%
-	beans 13.00%
-	onions 13.00%
-	peppers 13.00%
-	rice 29.00%
+Roll one                 --> beans
+Roll three               --> peppers avocado beans
+Expect one rice here     --> rice rice beans tortillas
+Roll ten                 --> beans peppers beans rice rice onions onions peppers tomatoes rice
+Roll infinite, slice ten --> rice tortillas tomatoes tomatoes onions peppers onions tomatoes onions avocado
+
+10 random dice rolls, please wait...
+	avocado 10.00%
+	beans 20.00%
+	onions 0.00%
+	peppers 20.00%
+	rice 10.00%
 	tomatoes 10.00%
-	tortillas 7.00%
-Randomized dice rolls -- 1000...
+	tortillas 30.00%
+100 random dice rolls, please wait...
 	avocado 13.00%
-	beans 11.80%
-	onions 12.20%
+	beans 10.00%
+	onions 7.00%
+	peppers 13.00%
+	rice 36.00%
+	tomatoes 7.00%
+	tortillas 14.00%
+1000 random dice rolls, please wait...
+	avocado 12.30%
+	beans 12.50%
+	onions 12.30%
 	peppers 15.10%
 	rice 24.50%
-	tomatoes 11.00%
+	tomatoes 10.90%
 	tortillas 12.40%
-Randomized dice rolls -- 10000...
-	avocado 12.01%
-	beans 13.49%
-	onions 11.80%
-	peppers 12.60%
-	rice 26.00%
-	tomatoes 11.92%
-	tortillas 12.18%
-Randomized dice rolls -- 25000...
-	avocado 12.30%
-	beans 12.20%
-	onions 12.52%
-	peppers 12.68%
-	rice 24.81%
-	tomatoes 12.70%
-	tortillas 12.78%
-Randomized dice rolls -- 50000...
-	avocado 12.81%
-	beans 12.51%
+10000 random dice rolls, please wait...
+	avocado 12.77%
+	beans 13.09%
 	onions 12.39%
-	peppers 12.65%
-	rice 24.70%
-	tomatoes 12.58%
-	tortillas 12.37%
-Randomized dice rolls -- 100000...
-	avocado 12.51%
-	beans 12.42%
-	onions 12.42%
+	peppers 12.13%
+	rice 24.29%
+	tomatoes 12.40%
+	tortillas 12.93%
+25000 random dice rolls, please wait...
+	avocado 12.49%
+	beans 12.40%
+	onions 12.21%
+	peppers 12.42%
+	rice 25.36%
+	tomatoes 12.64%
+	tortillas 12.48%
+50000 random dice rolls, please wait...
+	avocado 12.53%
+	beans 12.55%
+	onions 12.36%
 	peppers 12.50%
-	rice 25.01%
-	tomatoes 12.56%
-	tortillas 12.57%
+	rice 25.03%
+	tomatoes 12.62%
+	tortillas 12.41%
+100000 random dice rolls, please wait...
+	avocado 12.58%
+	beans 12.46%
+	onions 12.40%
+	peppers 12.62%
+	rice 24.85%
+	tomatoes 12.42%
+	tortillas 12.68%
