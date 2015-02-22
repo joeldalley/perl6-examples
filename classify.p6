@@ -42,9 +42,8 @@ exit;
 sub print_classified(Str $by, Pair @classified) {
     say "<== CLASSIFIED $by ==>";
     for @classified {
-        say "\t", .WHAT, " of ", 
-            .key.WHAT, " => ", .value.WHAT,
-            " ---> ", .key, " => ", .value;
+        say "\t$_.^name() of $_.key.^name() => $_.value.^name()",
+            " ---> $_.key() => $_.value()";
     }
     say Nil.Str;
 }
