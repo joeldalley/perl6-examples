@@ -40,8 +40,7 @@ for @sample_sizes -> $size {
     say "$size random dice rolls, please wait...";
 
     # Create a hash of (ingredient => roll count).
-    my Int %rolls = @unique Z map {0}, @unique;
-    $ingredients.roll($size).map: { %rolls{$_}++ };
+    my Int %rolls; $ingredients.roll($size).map: { %rolls{$_}++ };
 
     # Rice should converge on 25% over larger sample 
     # sizes, and everything else should converge on 12.5%.

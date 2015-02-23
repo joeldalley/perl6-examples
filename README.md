@@ -9,12 +9,10 @@ The Language Itself
 The Perl 6 language as specified has always looked promising. Very promising. That was never the problem. Even going back to the year 2000, the design goal virtues of Perl 6 were clear. The barrier, until recently, was the absence of a usable implementation. Now, having played around with MoarVM-backed Perl 6, I'm already spoiled by simple things, like the ability to write the following code:
 
 ```perl
-my Int %rolls;
-
 # Roll a six-sided die 1,000 times, and count
 # how many times each of the six sides came up.
 # Note the auto-vivification of %roll's hash entries.
-(1 .. 6).roll(1000).map: { %rolls{$_}++ };
+my Int %rolls; (1 .. 6).roll(1000).map: { %rolls{$_}++ };
 
 say %rolls.sort.perl;
 ```
