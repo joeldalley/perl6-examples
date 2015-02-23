@@ -6,7 +6,7 @@ On February 5th, 2015, I downloaded the December, 2014 Rakudo Star release of Pe
 The Language Itself
 ===================
 
-The Perl 6 language as specified has always looked promising. Very promising. That was never the problem. Even going back to the year 2000, the design goal virtues of Perl 6 were clear. The barrier, until recently, was the absence of a usable implementation. Now, backed by MoarVM, I'm already spoiled by simple things, such as the ability to write the following code:
+The Perl 6 language as specified has always looked promising. Very promising. That was never the problem. Even going back to the year 2000, the design goal virtues of Perl 6 were clear. The barrier, until recently, was the absence of a usable implementation. Now, having played around with MoarVM-backed Perl 6, I'm already spoiled by simple things, like the ability to write the following code:
 
 ```perl
 my Int %rolls;
@@ -29,5 +29,5 @@ Outputs:
 Copyright & License
 ===================
 
-All files in this repository are copyright &copy; Joel Dalley 2015, 
-and are distributed under the same license as Perl.
+All files in this repository are copyright &copy; Joel Dalley 2015,
+and are distributed under the same license as Perl. See LICENSE.
